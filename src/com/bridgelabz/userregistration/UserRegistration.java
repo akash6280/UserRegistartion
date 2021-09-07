@@ -16,10 +16,25 @@ public class UserRegistration {
 			System.out.println("Invalid");
 		}
 	}
+	
+	public static void validateLasttName() {
+		System.out.println("Enter Last name");
+		String lastName=scanner.nextLine();
+		
+		boolean result = Pattern.matches("^[A-Z][A-Za-z]{2,}$", lastName);
+		if(result) {
+			System.out.println("Valid");
+		}
+		else {
+			System.out.println("Invalid");
+		}
+	}
+
 
 	public static void main(String[] args) {
 		
 		validateFirstName();
+		validateLasttName();
 	}
 }
 		
