@@ -54,13 +54,25 @@ public class UserRegistration {
 			System.out.println("Invalid");
 		}
 	}
-
+	public static void validatePassword() {
+		System.out.println("Enter password");
+		String password=scanner.nextLine();
+		
+		boolean result = Pattern.matches(".{8,}$", password);
+		if(result) {
+			System.out.println("Valid");
+		}
+		else {
+			System.out.println("Invalid");
+		}
+	}
 	public static void main(String[] args) {
 		
 		validateFirstName();
 		validateLasttName();
 		validateEmail();
 		validatePhoneNumber();
+		validatePassword();
 	}
 }
 		
