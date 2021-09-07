@@ -42,12 +42,25 @@ public class UserRegistration {
 			System.out.println("Invalid");
 		}
 	}
+	public static void validatePhoneNumber() {
+		System.out.println("Enter phone number");
+		String phoneNumber=scanner.nextLine();
+		
+		boolean result = Pattern.matches("^[0-9]{2}[ ][1-9][0-9]{9}$", phoneNumber);
+		if(result) {
+			System.out.println("Valid");
+		}
+		else {
+			System.out.println("Invalid");
+		}
+	}
 
 	public static void main(String[] args) {
 		
 		validateFirstName();
 		validateLasttName();
 		validateEmail();
+		validatePhoneNumber();
 	}
 }
 		
