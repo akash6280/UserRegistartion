@@ -29,12 +29,25 @@ public class UserRegistration {
 			System.out.println("Invalid");
 		}
 	}
-
+	
+	public static void validateEmail() {
+		System.out.println("Enter email id");
+		String emailId=scanner.nextLine();
+		
+		boolean result = Pattern.matches("^[a-zA-Z][a-zA-Z0-9]*[a-zA-Z0-9]([+-_.][a-zA-Z]*)?@[a-zA-Z0-9]*[.][a-z]{2,4}([.][a-zA-z]{2})?$", emailId);
+		if(result) {
+			System.out.println("Valid");
+		}
+		else {
+			System.out.println("Invalid");
+		}
+	}
 
 	public static void main(String[] args) {
 		
 		validateFirstName();
 		validateLasttName();
+		validateEmail();
 	}
 }
 		
