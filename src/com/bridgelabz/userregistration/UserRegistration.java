@@ -58,7 +58,7 @@ public class UserRegistration {
 		System.out.println("Enter password");
 		String password=scanner.nextLine();
 		
-		boolean result = Pattern.matches(".{8,}$", password);
+		boolean result = Pattern.matches("(?=.*[A-Z]).{8,}$", password);
 		if(result) {
 			System.out.println("Valid");
 		}
@@ -68,10 +68,10 @@ public class UserRegistration {
 	}
 	public static void main(String[] args) {
 		
-		validateFirstName();
-		validateLasttName();
-		validateEmail();
-		validatePhoneNumber();
+	//	validateFirstName();
+	//	validateLasttName();
+	//	validateEmail();
+	//	validatePhoneNumber();
 		validatePassword();
 	}
 }
